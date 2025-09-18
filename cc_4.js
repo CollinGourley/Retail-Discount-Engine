@@ -22,3 +22,12 @@
         }
         console.log (products.promoPrice)
     //Step 4 Create a Variable
+        let customerType = "Athlete";
+        let extraDiscount;
+
+        if (customerType === "Athlete") {extraDiscount = .05;}
+        else if (customerType === "student") {extraDiscount = .10;}
+        else {extraDiscount = 0;}
+
+        console.log(`Extra discount for ${customerType}: ${extraDiscount * 100}%`);
+    //Step 5 Checkout Process & Inventory
