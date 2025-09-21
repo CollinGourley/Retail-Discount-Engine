@@ -31,3 +31,22 @@
 
         console.log(`Extra discount for ${customerType}: ${extraDiscount * 100}%`);
     //Step 5 Checkout Process & Inventory
+        for (let i = 1; i <= 3; i++) {
+        let subtotal = 0;
+
+         for (let p of products) {
+            if (p.inventory > 0) {
+            subtotal += parseFloat(p.promoPrice);
+            p.inventory--;} }
+
+        let extraDiscount;
+
+        if (customerType === "Athlete") {extraDiscount = .05;}
+        else if (customerType === "student") {extraDiscount = .10;}
+        else {extraDiscount = 0;}
+
+    let finalTotal = subtotal * (1 - extraDiscount);
+    console.log(`Customer ${i}: $${finalTotal.toFixed(2)}`);}
+
+    console.log("Remaining inventory:", products);
+    //Step 6 Use for...in to log
