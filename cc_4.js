@@ -50,3 +50,7 @@
 
     console.log("Remaining inventory:", products);
     //Step 6 Use for...in to log
+
+    let firstProduct = products [0]
+    for (let key in firstProduct)
+        console.log(`${key}: ${firstProduct[key]}`);
