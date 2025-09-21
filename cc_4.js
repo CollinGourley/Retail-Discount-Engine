@@ -54,3 +54,8 @@
     let firstProduct = products [0]
     for (let key in firstProduct)
         console.log(`${key}: ${firstProduct[key]}`);
+    // Step 7 Use Object.entires() and destructuring to log all product info after inventory is updated.
+
+    let helmet = products[1]
+    for(let[key, value] of Object.entries(helmet))
+    { console.log(`${key}: ${value}`)};
